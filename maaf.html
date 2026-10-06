@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maaf ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="apology-page">
+<div id="hearts"></div>
+<nav>
+<div class="logo">♡ OUR STORY</div>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="story.html">Story</a>
+<a href="her.html">Her</a>
+<a href="us.html">Us</a>
+<a href="letter.html">Letter</a>
+<a href="maaf.html" class="active nav-apology">Maaf ♡</a>
+</div>
+</nav>
+<section class="apology-hero">
+<div class="apology-card reveal">
+<span class="apology-heart">♡</span>
+<span class="eyebrow">A LITTLE APOLOGY</span>
+<h1>Maaf,<br><span>untuk semuanya.</span></h1>
+<p class="apology-intro">Aku tahu kata maaf mungkin tidak bisa langsung memperbaiki semuanya. tapi kali ini abangg ingin mengatakannya dengan sungguh-sungguh.</p>
+<button class="apology-button" onclick="openApology()"><span>Untuk kamu</span><span>♡</span></button>
+<div id="apology-message" class="apology-message">
+<p>maaf kalau selama ini masih ada kata-kata, sikap, atau kesalahan abangg yang pernah bikin kamu kecewa, sedih, atau merasa tidak cukup dihargai.</p>
+<p>abang tidak mau mencari alasan. abng cuma ingin dedee tahu kalau abangg sadar, abang menyesal, dan abangg ingin belajar menjadi lebih baik untuk kita.</p>
+<p>Terima kasih karena dede sudah bertahan, sudah sabar, dan masih mau mendengarkan abang. Kalau ada satu hal yang ingin abang jaga setelah ini, itu adalah kamu dan cerita kita untuk masa depan kita.</p>
+<div class="apology-signature">Dengan tulus,<br><strong>mas mas prik ♡</strong></div>
+</div>
+</div>
+<div class="apology-decoration" aria-hidden="true">
+<div class="apology-orb"></div>
+<div class="apology-note note-one">I'm sorry ♡</div>
+<div class="apology-note note-two">please stay ✦</div>
+<div class="apology-ring"></div>
+</div>
+</section>
+<section class="forgive-section">
+<span class="eyebrow">ONE MORE THING</span>
+<h2>Kalau aku boleh meminta<br><span>satu kesempatan lagi.</span></h2>
+<p>Bukan untuk melupakan semua yang pernah terjadi, tapi untuk membuat cerita kita berikutnya menjadi lebih baik.</p>
+<a href="letter.html" class="main-button">Read My Letter ♡</a>
+</section>
+<script src="js/script.js"></script>
+<script>
+function openApology() {
+    const message = document.getElementById('apology-message');
+    const button = document.querySelector('.apology-button');
+    if (!message || !button) return;
+    message.classList.toggle('show');
+    button.classList.toggle('opened');
+    if (message.classList.contains('show')) {
+        button.querySelector('span:first-child').textContent = 'Terima kasih sudah membaca';
+        setTimeout(() => message.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150);
+    } else {
+        button.querySelector('span:first-child').textContent = 'Untuk kamu';
+    }
+}
+</script>
+</body>
+</html>
